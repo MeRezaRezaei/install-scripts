@@ -28,7 +28,7 @@ if [ ! -f "$TARGET_SCRIPT" ]; then
     exit 1
 fi
 
-# Make the script executable and run it
+# Make the script executable and run it WITH THE TOKEN
 chmod +x "$TARGET_SCRIPT"
 echo "Starting installation script from private repository..."
-"$TARGET_SCRIPT"
+"$TARGET_SCRIPT" "$GITHUB_TOKEN"  # Pass token to the private script
